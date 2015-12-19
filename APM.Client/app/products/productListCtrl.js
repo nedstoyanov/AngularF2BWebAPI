@@ -11,9 +11,10 @@
 
         vm.searchCriteria = "GDN";
 
-        productResource.query({$skip:1, $top:3}, function (data) {
-            vm.products = data;
-        });
-       
+        productResource.query({}, {
+            function (data) {
+                vm.products = data;
+            }});
+        }
     }
-}());
+());
